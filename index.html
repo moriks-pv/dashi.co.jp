@@ -231,16 +231,16 @@
 
     <section id="reservation">
       <div class="reservation_section_wrap up" id="parallax-01">
-        <h3 class="section-title reservation_title">RESERVATION</h3>
-        <div class="reservation_info_wrap">
-          <p class="reservation-info">
-            お席のご予約はお電話<br />またはインターネットにて<br />受付しております
-          </p>
-          <p class="reservation-tel">01 00 01 00 00</p>
-          <button id="reservation_button_2">
-            <a class="reservation-button-text2" href=reservation/reservation.html target="_blank" rel="noopener noreferrer">ネットで予約する</a>
-          </button>
-        </div>
+          <h3 class="section-title reservation_title">RESERVATION</h3>
+          <div class="reservation_info_wrap">
+            <p class="reservation-info">
+              お席のご予約はお電話<br />またはインターネットにて<br />受付しております
+            </p>
+            <p class="reservation-tel">01 00 01 00 00</p>
+            <button id="reservation_button_2">
+              <a class="reservation-button-text2" href=reservation/reservation.html target="_blank" rel="noopener noreferrer">ネットで予約する</a>
+            </button>
+          </div>
       </div>
     </section>
 
@@ -261,7 +261,7 @@
             <span>本サイトからご予約も可能となっておりますので、</span>
             <span>皆様のご来店お待ちしております。</span>
           </p>
-          <a class="js-modal-close" href="">CLOSE</a>
+          <a class="js-modal-close" href="">×CLOSE</a>
       </div><!--modal__inner-->
     </div><!--modal-->
     <div id="modal02" class="modal js-modal">
@@ -278,7 +278,7 @@
           <div class="togo_button">
             <a class="togo_link" href="menu/togo_menu.pdf" target="_blank" rel="noopener noreferrer">テイクアウトメニュー</a>
           </div>
-            <a class="js-modal-close" href="">CLOSE</a>
+            <a class="js-modal-close" href="">×CLOSE</a>
       </div><!--modal__inner-->
     </div><!--modal-->
     <div id="modal03" class="modal js-modal">
@@ -293,7 +293,7 @@
           <span class="sp_only">1/1- 通常営業</span>
           <span>ご不便をおかけいたしますがご理解の程よろしくお願いいたします。</span>
         </p>
-          <a class="js-modal-close" href="">CLOSE</a>
+          <a class="js-modal-close" href="">×CLOSE</a>
       </div><!--modal__inner-->
     </div><!--modal-->
 
@@ -334,7 +334,7 @@
       });
       //メインビジュアルスライダー
         //スマホ表示
-      if (window.matchMedia("(max-width: 640px)").matches) {
+      if (window.matchMedia("(max-width: 768px)").matches) {
         $('.slider').slick({
         dots: false,
         infinite: true,
@@ -413,9 +413,11 @@
         });
       });
       
-      $(".up").css({
+      //3カラムスマホ表示
+      if (window.matchMedia("(max-width: 768px)").matches) {
+        $(".col_3item").css({
         opacity: 0,
-        transform: "translateY(" + fade_move + "px)",
+        transform: "translateX(" + fade_move + "px)",
         transition: fade_time + "ms",
       });
       // スクロールまたはロードするたびに実行
@@ -423,19 +425,19 @@
         const scroll_top = $(this).scrollTop();
         const scroll_bottom = scroll_top + $(this).height();
         const fade_position = scroll_bottom - fade_bottom;
-        $(".up").each(function () {
+        $(".col_3item").each(function () {
           const this_position = $(this).offset().top;
           if (fade_position > this_position) {
             $(this).css({
               opacity: 1,
-              transform: "translateY(0)",
+              transform: "translateX(0)",
             });
           }
         });
       });
-      $(".down").css({
+      $(".col_3item").css({
         opacity: 0,
-        transform: "translateY(-" + fade_move + "px)",
+        transform: "translateX(-" + fade_move + "px)",
         transition: fade_time + "ms",
       });
       // スクロールまたはロードするたびに実行
@@ -443,16 +445,59 @@
         const scroll_top = $(this).scrollTop();
         const scroll_bottom = scroll_top + $(this).height();
         const fade_position = scroll_bottom - fade_bottom;
-        $(".down").each(function () {
+        $(".col_3item").each(function () {
           const this_position = $(this).offset().top;
           if (fade_position > this_position) {
             $(this).css({
               opacity: 1,
-              transform: "translateY(0)",
+              transform: "translateX(0)",
             });
           }
         });
       });
+  
+      }else{//3カラムPC表示
+        $(".up").css({
+          opacity: 0,
+          transform: "translateY(" + fade_move + "px)",
+          transition: fade_time + "ms",
+        });
+        // スクロールまたはロードするたびに実行
+        $(window).on("scroll load", function () {
+          const scroll_top = $(this).scrollTop();
+          const scroll_bottom = scroll_top + $(this).height();
+          const fade_position = scroll_bottom - fade_bottom;
+          $(".up").each(function () {
+            const this_position = $(this).offset().top;
+            if (fade_position > this_position) {
+              $(this).css({
+                opacity: 1,
+                transform: "translateY(0)",
+              });
+            }
+          });
+        });
+        $(".down").css({
+          opacity: 0,
+          transform: "translateY(-" + fade_move + "px)",
+          transition: fade_time + "ms",
+        });
+        // スクロールまたはロードするたびに実行
+        $(window).on("scroll load", function () {
+          const scroll_top = $(this).scrollTop();
+          const scroll_bottom = scroll_top + $(this).height();
+          const fade_position = scroll_bottom - fade_bottom;
+          $(".down").each(function () {
+            const this_position = $(this).offset().top;
+            if (fade_position > this_position) {
+              $(this).css({
+                opacity: 1,
+                transform: "translateY(0)",
+              });
+            }
+          });
+        });
+      }
 
       //newsモーダルウィンドウ表示
       $('tr').each(function(){
@@ -472,8 +517,6 @@
       $('.sp_menu_content ul li a').on('click', function(event) {
         $('#menu-btn-check').prop('checked', false);
     });
-
-    // first-vの背景画像のパララックス
     
     </script>
     
