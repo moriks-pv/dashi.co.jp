@@ -1001,15 +1001,6 @@ input, select{
   width: 60%;
 }
 	
-input[type=date]::-webkit-calendar-picker-indicator {
-  color: rgba(0, 0, 0, 0);
-  opacity: 1;
-  display: block;
-  background: url(../images/select_arrow.png) no-repeat!important;
-  background-position: right 8px center!important;
-  background-size: 13px 13px!important;
-}
-
 	
 ::placeholder {
   font-size: 0.8em;
