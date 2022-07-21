@@ -131,7 +131,7 @@
       </div>
       <div class="section_content">
         <div class="col_3">
-          <a href="menu/food_menu.pdf" target="_blank" rel="noopener noreferrer" class="col_3item down">
+          <a href="menu/food_menu.pdf" target="_blank" rel="noopener noreferrer" class="col_3item down sp_left">
             <img class="menu_photo" src="images/food_photo.png" />
             <div class="halfcircle_1">
               <p class="food_title1">お食事</p> 
@@ -147,7 +147,7 @@
             </div>
             <img class="menu_photo" src="images/drink_photo.png" />
           </a>
-          <a href="menu/drink_menu.pdf" target="_blank" rel="noopener noreferrer" class="col_3item down menu_sponly">
+          <a href="menu/drink_menu.pdf" target="_blank" rel="noopener noreferrer" class="col_3item menu_sponly sp_right">
             <img class="menu_photo" src="images/drink_photo.png" />
             <div class="halfcircle_1">
               <p class="food_title1">お飲み物</p>
@@ -155,7 +155,7 @@
               <img src="images/arrow_icon.png" alt=""></p>
             </div>
           </a>
-          <a href="menu/togo_menu.pdf" target="_blank" rel="noopener noreferrer" class="col_3item down">
+          <a href="menu/togo_menu.pdf" target="_blank" rel="noopener noreferrer" class="col_3item down sp_left">
             <img class="menu_photo" src="images/togo_photo.png" />
             <div class="halfcircle_1">
               <p class="food_title1">お持ち帰り</p> 
@@ -415,7 +415,7 @@
       
       //3カラムスマホ表示
       if (window.matchMedia("(max-width: 768px)").matches) {
-        $(".col_3item").css({
+        $(".sp_right").css({
         opacity: 0,
         transform: "translateX(" + fade_move + "px)",
         transition: fade_time + "ms",
@@ -425,7 +425,7 @@
         const scroll_top = $(this).scrollTop();
         const scroll_bottom = scroll_top + $(this).height();
         const fade_position = scroll_bottom - fade_bottom;
-        $(".col_3item").each(function () {
+        $(".sp_right").each(function () {
           const this_position = $(this).offset().top;
           if (fade_position > this_position) {
             $(this).css({
@@ -435,7 +435,7 @@
           }
         });
       });
-      $(".col_3item").css({
+      $(".sp_left").css({
         opacity: 0,
         transform: "translateX(-" + fade_move + "px)",
         transition: fade_time + "ms",
@@ -445,7 +445,7 @@
         const scroll_top = $(this).scrollTop();
         const scroll_bottom = scroll_top + $(this).height();
         const fade_position = scroll_bottom - fade_bottom;
-        $(".col_3item").each(function () {
+        $(".sp_left").each(function () {
           const this_position = $(this).offset().top;
           if (fade_position > this_position) {
             $(this).css({
@@ -455,6 +455,7 @@
           }
         });
       });
+
   
       }else{//3カラムPC表示
         $(".up").css({
