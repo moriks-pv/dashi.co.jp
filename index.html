@@ -1,0 +1,482 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <!-- 文字コード！-->
+    <meta charset="UTF-8" />
+
+    <!-- ブラウザで表示されるタイトル !-->
+    <title>DASHI izakaya japonais</title>
+
+    <!-- スタイルシート -->
+    <link href="css/reset.min.css" rel="stylesheet" type="text/css" />
+    <link href="css/style.css" rel="stylesheet" type="text/css" />
+    <link href="slick/slick.css" rel="stylesheet" type="text/css" />
+    <link href="slick/slick-theme.css" rel="stylesheet" type="text/css" />
+    
+
+    <!-- 表示領域をデバイス依存にする、viewportを設定する -->
+    <meta
+      name="viewport"
+      content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=0,viewport-fit=cover"
+    />
+    <!-- webフォント読み込み -->
+    <script>
+      (function (d) {
+        var config = {
+            kitId: "bti6zyh",
+            scriptTimeout: 3000,
+            async: true,
+          },
+          h = d.documentElement,
+          t = setTimeout(function () {
+            h.className =
+              h.className.replace(/\bwf-loading\b/g, "") + " wf-inactive";
+          }, config.scriptTimeout),
+          tk = d.createElement("script"),
+          f = false,
+          s = d.getElementsByTagName("script")[0],
+          a;
+        h.className += " wf-loading";
+        tk.src = "https://use.typekit.net/" + config.kitId + ".js";
+        tk.async = true;
+        tk.onload = tk.onreadystatechange = function () {
+          a = this.readyState;
+          if (f || (a && a != "complete" && a != "loaded")) return;
+          f = true;
+          clearTimeout(t);
+          try {
+            Typekit.load(config);
+          } catch (e) {}
+        };
+        s.parentNode.insertBefore(tk, s);
+      })(document);
+    </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Akaya+Kanadaka&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body>
+    <header class="header">
+      <ul class="gnav-pc">
+        <li><a class="gnav-content" href="#">TOP</a></li>
+        <li><a class="gnav-content" href="#concept">CONCEPT</a></li>
+        <li><a class="gnav-content" href="#menu">MENU</a></li>
+        <li><a class="gnav-content" href="#location">LOCATION</a></li>
+        <li><a class="gnav-content" href="#news">NEWS</a></li>
+      </ul>
+    </header>
+    <header class="sp_header">
+      <div class="hamburger-menu">
+          <input type="checkbox" id="menu-btn-check">
+          <label for="menu-btn-check" class="menu-btn"><span></span></label>
+          <div class="sp_menu_content">
+            <ul class="sp_menu_list">
+                <li><a href="#">TOP</a></li>
+                <li><a href="#concept">CONCEPT</a></li>
+                <li><a href="#menu">MENU</a></li>
+                <li><a href="#location">LOCATION</a></li>
+                <li><a href="#news">NEWS</a></li>
+                <li><a href="#reservation">RESERVATION</a></li>
+            </ul>
+        </div>
+      </div>
+    </header>
+
+    <button id="reservation-button">
+      <a class="reservation-button-text" href="#reservation"><img src="images/reservation_button3.png" class="reservation_button_img"/></a>
+    </button>
+
+    <section id="mainvisual">
+      <div class="slider">
+        <div><img src="images/mainvisual_01.png" alt="" /></div>
+        <div><img src="images/mainvisual_02.png" alt="" /></div>
+        <div><img src="images/mainvisual_03.png" alt="" /></div>
+        <div><img src="images/mainvisual_04.png" alt="" /></div>
+      </div>
+      <div class="logo_area"><img src="images/Logo.png"/></div>
+      <div class="scrolldown"><span>Scroll</span></div> 
+    </section>
+
+ 
+
+    <section id="concept">
+      <div class="section_title_wrap">
+        <img src="images/title_icon.png" class="title_icon" />
+        <h2 class="section-title">CONCEPT</h2>
+      </div>
+      <div class="section_content">
+        <div class="col_2">
+          <div class="col_2item left">
+            <p class="concept-title"><span>”ただいま”</span><span>と言いたくなる居酒屋</span></p>
+            <p class="section-discription">
+              <span>パリの9区、オペラ地区にある日本食居酒屋「DASHI」。</span><span>当店は本格的な和食一品料理をリーズナブルなお値段で</span><span>提供しております。</span>
+              <span>どこか懐かしく、そして我が家のように落ち着く空間で、</span><span>家族と、職場の仲間と、友人と、大切な人と、</span><span>ゆったりとしたひとときを美味しいお料理ともに</span><span>お楽しみください。</span>
+            </p>
+          </div>
+          <div class="col_2item right">
+            <img src="images/concept_photo.png" class="concept_img" />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="menu">
+      <div class="section_title_wrap">
+        <img src="images/title_icon.png" class="title_icon" />
+        <h2 class="section-title">MENU</h2>
+      </div>
+      <div class="section_content">
+        <div class="col_3">
+          <a href="menu/food_menu.pdf" target="_blank" rel="noopener noreferrer" class="col_3item down">
+            <img class="menu_photo" src="images/food_photo.png" />
+            <div class="halfcircle_1">
+              <p class="food_title1">お食事</p> 
+              <p class="food_content">定番のおつまみから<br />本格的な和食お料理まで<br />幅広くご用意しております<br>
+              <img src="images/arrow_icon.png" alt=""></p>
+            </div>
+          </a>
+          <a href="menu/drink_menu.pdf" target="_blank" rel="noopener noreferrer" class="col_3item up menu_pconly">
+            <div class="halfcircle_2">
+              <p class="food_title2">お飲み物</p>
+              <p class="food_content">日本酒はもちろん<br />和食にも合うワインなどを<br />取り揃えております<br>
+              <img src="images/arrow_icon.png" alt=""></p>
+            </div>
+            <img class="menu_photo" src="images/drink_photo.png" />
+          </a>
+          <a href="menu/drink_menu.pdf" target="_blank" rel="noopener noreferrer" class="col_3item down menu_sponly">
+            <img class="menu_photo" src="images/drink_photo.png" />
+            <div class="halfcircle_1">
+              <p class="food_title1">お飲み物</p>
+              <p class="food_content">日本酒はもちろん<br />和食にも合うワインなどを<br />取り揃えております<br>
+              <img src="images/arrow_icon.png" alt=""></p>
+            </div>
+          </a>
+          <a href="menu/togo_menu.pdf" target="_blank" rel="noopener noreferrer" class="col_3item down">
+            <img class="menu_photo" src="images/togo_photo.png" />
+            <div class="halfcircle_1">
+              <p class="food_title1">お持ち帰り</p> 
+              <p class="food_content">お店の味を<br/>ご自宅でいつでも<br/>お楽しみいただけます<br>
+              <img src="images/arrow_icon.png" alt=""></p>
+            </div>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section id="location">
+      <div class="section_title_wrap">
+        <img src="images/title_icon.png" class="title_icon" />
+        <h2 class="section-title">LOCATION</h2>
+      </div>
+      <div class="section_content">
+        <div class="col_2">
+          <div class="col_2item left">
+            <div class="gmap">
+              <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2660.861614059154!2d2.3300926459035542!3d48.87291506814777!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47e66e3a1b51cbab%3A0x1e750e253698740e!2z44Oe44Kv44OJ44OK44Or44OJ!5e0!3m2!1sja!2sjp!4v1655203125788!5m2!1sja!2sjp" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+          </div>
+          <div class="col_2item right">
+            <table class="location_table">
+              <tr><td>店名</td><td class="restaurant_name">DASHI izakaya japonais</td></tr>
+              <tr><td>住所</td><td>11 Bd des japonais, 70000 Paris</td></tr>
+              <tr><td>アクセス</td><td>地下鉄Opéra駅より徒歩3分</td></tr>
+              <tr><td>営業時間</td><td>11:00 - 23:00</td></tr>
+              <tr><td>定休日</td><td>毎週月曜日</td></tr>
+              <tr><td>総席数</td><td>50席</td></tr>
+            </table>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="news">
+      <div class="section_title_wrap">
+        <img src="images/title_icon.png" class="title_icon" />
+        <h2 class="section-title">NEWS</h2>
+      </div>
+      <div class="section_content">
+        <div class="col_2">
+          <div class="col_2item left">
+          <p class="news_content">
+            <table class="news_table">
+              <tr data-target="modal01" class="tr"><td>2022/05/01</td><td><img class="news_tag" src="images/oshirase_tag.png"/></td><td class="news_description">公式サイトオープンしました</td></tr> 
+              <tr data-target="modal02" class="tr"><td>2022/06/05</td><td><img class="news_tag" src="images/oshirase_tag.png"/></td><td class="news_description">テイクアウトはじめました</td></tr>
+              <tr data-target="modal03" class="tr"><td>2022/12/01</td><td><img class="news_tag" src="images/eigyojikan_tag.png"/></td><td class="news_description">年末年始の営業について</td></tr>
+            </table>
+            </p> 
+          </div>
+          <div class="col_2item_sns right">
+              <p class="sns_title">Follow us!</p>
+              <p class="sns_description">SNSでも最新情報を発信しています</p>
+              <div class="sns_list">
+                <a href="#news" class="sns_button1 sns_hover">
+                  Facebook
+                </a>
+                <a href="#news" class="sns_button2 sns_hover">
+                  Instagram
+                </a>
+                <a href="#news" class="sns_button3 sns_hover">
+                  Twitter
+                </a>
+              </div> 
+          </div>
+        </div>
+      </div>
+      
+    </section>
+
+    <section id="reservation">
+      <div class="reservation_section_wrap up" id="parallax-01">
+        <h3 class="section-title reservation_title">RESERVATION</h3>
+        <div class="reservation_info_wrap">
+          <p class="reservation-info">
+            お席のご予約はお電話<br />またはインターネットにて<br />受付しております
+          </p>
+          <p class="reservation-tel">01 00 01 00 00</p>
+          <button id="reservation_button_2">
+            <a class="reservation-button-text2" href=reservation/reservation.html target="_blank" rel="noopener noreferrer">ネットで予約する</a>
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <p>Copyright &copy; 2022 DASHI izakaya japonais All rights reserved.</p>
+    </footer>
+
+    <!-- newsのモーダルウィンドウ -->
+    <div id="modal01" class="modal js-modal">
+      <div class="modal__bg js-modal-close"></div>
+      <div class="modal__content">
+          <img src="images/oshirase_tag.png" alt="">
+          <p>2022/05/01</p>
+          <p class="details_title">公式サイトオープンしました</p>
+          <p class="news_details">
+            <span>店舗開店とともに公式サイトをオープンしました！</span>
+            <span>メニューや店舗情報、最新のお知らせをご確認いただけます。</span>
+            <span>本サイトからご予約も可能となっておりますので、</span>
+            <span>皆様のご来店お待ちしております。</span>
+          </p>
+          <a class="js-modal-close" href="">CLOSE</a>
+      </div><!--modal__inner-->
+    </div><!--modal-->
+    <div id="modal02" class="modal js-modal">
+      <div class="modal__bg js-modal-close"></div>
+      <div class="modal__content">
+        <img src="images/oshirase_tag.png" alt="">
+        <p>2022/06/05</p>
+        <p class="details_title">テイクアウトはじめました</p>
+        <p class="news_details">
+          <span>お客様からのご要望にお答えしてテイクアウトをはじめました。</span>
+          <span>メニューは以下ボタンからもご確認いただけます。</span>
+          <span>皆様のご利用お待ちしております！</span>
+        </p>
+          <div class="togo_button">
+            <a class="togo_link" href="menu/togo_menu.pdf" target="_blank" rel="noopener noreferrer">テイクアウトメニュー</a>
+          </div>
+            <a class="js-modal-close" href="">CLOSE</a>
+      </div><!--modal__inner-->
+    </div><!--modal-->
+    <div id="modal03" class="modal js-modal">
+      <div class="modal__bg js-modal-close"></div>
+      <div class="modal__content">
+        <img src="images/eigyojikan_tag.png" alt="">
+        <p>2022/12/01</p>
+        <p class="details_title">年末年始の営業について</p>
+        <p class="news_details">
+          <span>当店の年末年始の営業時間は下記の通りとなっております。</span>
+          <span class="sp_only">12/25 - 12/31 休業</span>
+          <span class="sp_only">1/1- 通常営業</span>
+          <span>ご不便をおかけいたしますがご理解の程よろしくお願いいたします。</span>
+        </p>
+          <a class="js-modal-close" href="">CLOSE</a>
+      </div><!--modal__inner-->
+    </div><!--modal-->
+
+
+    <!-- jQueryの読み込み -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <!-- slickの読み込み -->
+    <script type="text/javascript" src="slick/slick.min.js"></script>
+
+    <script type="text/javascript">
+      //ロゴフェードイン
+      $(function() {
+        // 一旦hide()で隠してフェードインさせる
+        $('.logo_area').hide().fadeIn(1500);
+      });
+
+      //予約ボタンのフェードアウト
+      $(function button_fadeout(){
+        $('#reservation-button').click(function(){
+            var speed = 500;
+            var href= $(this).attr("href");
+            var target = $(href == "#" || href == "" ? 'html' : href);
+            var position = target.offset().top;
+            $("html, body").animate({scrollTop:position}, speed, "swing");
+            return false;
+          });
+
+        var scrollend = $('#news').offset().top ; //ページ上部からの距離を取得
+        var distance = 0;
+        $(document).scroll(function(){
+          distance = $(this).scrollTop(); //スクロールした距離を取得
+          if (scrollend <= distance) {
+            $('#reservation-button').fadeOut();
+          } else{
+            $('#reservation-button').fadeIn();
+          }
+       });
+      });
+      //メインビジュアルスライダー
+        //スマホ表示
+      if (window.matchMedia("(max-width: 640px)").matches) {
+        $('.slider').slick({
+        dots: false,
+        infinite: true,
+        speed: 800,
+        fade: true,
+        cssEase: 'linear',
+        autoplay: true,
+        autoplaySpeed:2500,
+        arrows: false, 
+      });
+    }else{
+        //PC表示
+      $('.slider').slick({
+        autoplay: true, // 自動でスクロール
+        autoplaySpeed: 0, // 自動再生のスライド切り替えまでの時間を設定
+        speed: 15000, // スライドが流れる速度を設定
+        cssEase: "linear", // スライドの流れ方を等速に設定
+        slidesToShow: 2, // 表示するスライドの数
+        swipe: false, // 操作による切り替えはさせない
+        arrows: false, // 矢印非表示
+        pauseOnFocus: false, // スライダーをフォーカスした時にスライドを停止させるか
+        pauseOnHover: false, // スライダーにマウスホバーした時にスライドを停止させるか
+        responsive: [
+          {
+            breakpoint: 750,
+            settings: {
+            slidesToShow: 1, // 画面幅750px以下でスライド3枚表示
+            }
+          }
+        ]
+      });
+    }
+      //各種コンテンツフェードイン
+      const fade_bottom = 50; // 画面下からどの位置でフェードさせるか(px)
+      const fade_move = 100; // どのぐらい要素を動かすか(px)
+      const fade_time = 1200; // フェードの時間(ms)
+      // フェード前のcssを定義
+      $(".right").css({
+        opacity: 0,
+        transform: "translateX(" + fade_move + "px)",
+        transition: fade_time + "ms",
+      });
+      // スクロールまたはロードするたびに実行
+      $(window).on("scroll load", function () {
+        const scroll_top = $(this).scrollTop();
+        const scroll_bottom = scroll_top + $(this).height();
+        const fade_position = scroll_bottom - fade_bottom;
+        $(".right").each(function () {
+          const this_position = $(this).offset().top;
+          if (fade_position > this_position) {
+            $(this).css({
+              opacity: 1,
+              transform: "translateX(0)",
+            });
+          }
+        });
+      });
+      $(".left").css({
+        opacity: 0,
+        transform: "translateX(-" + fade_move + "px)",
+        transition: fade_time + "ms",
+      });
+      // スクロールまたはロードするたびに実行
+      $(window).on("scroll load", function () {
+        const scroll_top = $(this).scrollTop();
+        const scroll_bottom = scroll_top + $(this).height();
+        const fade_position = scroll_bottom - fade_bottom;
+        $(".left").each(function () {
+          const this_position = $(this).offset().top;
+          if (fade_position > this_position) {
+            $(this).css({
+              opacity: 1,
+              transform: "translateX(0)",
+            });
+          }
+        });
+      });
+      
+      $(".up").css({
+        opacity: 0,
+        transform: "translateY(" + fade_move + "px)",
+        transition: fade_time + "ms",
+      });
+      // スクロールまたはロードするたびに実行
+      $(window).on("scroll load", function () {
+        const scroll_top = $(this).scrollTop();
+        const scroll_bottom = scroll_top + $(this).height();
+        const fade_position = scroll_bottom - fade_bottom;
+        $(".up").each(function () {
+          const this_position = $(this).offset().top;
+          if (fade_position > this_position) {
+            $(this).css({
+              opacity: 1,
+              transform: "translateY(0)",
+            });
+          }
+        });
+      });
+      $(".down").css({
+        opacity: 0,
+        transform: "translateY(-" + fade_move + "px)",
+        transition: fade_time + "ms",
+      });
+      // スクロールまたはロードするたびに実行
+      $(window).on("scroll load", function () {
+        const scroll_top = $(this).scrollTop();
+        const scroll_bottom = scroll_top + $(this).height();
+        const fade_position = scroll_bottom - fade_bottom;
+        $(".down").each(function () {
+          const this_position = $(this).offset().top;
+          if (fade_position > this_position) {
+            $(this).css({
+              opacity: 1,
+              transform: "translateY(0)",
+            });
+          }
+        });
+      });
+
+      //newsモーダルウィンドウ表示
+      $('tr').each(function(){
+        $(this).on('click',function(){
+          var target = $(this).data('target');
+          var modal = document.getElementById(target);
+          $(modal).fadeIn();
+          return false;
+        });
+      });
+      $('.js-modal-close').on('click',function(){
+        $('.js-modal').fadeOut();
+        return false;
+      }); 
+
+      //スマホメニュークリック後非表示（チェックボックス外す）
+      $('.sp_menu_content ul li a').on('click', function(event) {
+        $('#menu-btn-check').prop('checked', false);
+    });
+
+    // first-vの背景画像のパララックス
+    
+    </script>
+    
+    
+  </body>
+</html>

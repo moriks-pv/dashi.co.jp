@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <!-- 文字コード！-->
+    <meta charset="UTF-8" />
+
+    <!-- ブラウザで表示されるタイトル !-->
+    <title>reservation form</title>
+
+    <!-- スタイルシート -->
+    <link href="../css/reset.min.css" rel="stylesheet" type="text/css" />
+    <link href="../css/style.css" rel="stylesheet" type="text/css" />
+    <link href="../slick/slick.css" rel="stylesheet" type="text/css" />
+    <link href="../slick/slick-theme.css" rel="stylesheet" type="text/css" />
+
+    <!-- 表示領域をデバイス依存にする、viewportを設定する -->
+    <meta
+      name="viewport"
+      content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=0,viewport-fit=cover"
+    />
+    <!-- webフォント読み込み -->
+    <script>
+      (function (d) {
+        var config = {
+            kitId: "bti6zyh",
+            scriptTimeout: 3000,
+            async: true,
+          },
+          h = d.documentElement,
+          t = setTimeout(function () {
+            h.className =
+              h.className.replace(/\bwf-loading\b/g, "") + " wf-inactive";
+          }, config.scriptTimeout),
+          tk = d.createElement("script"),
+          f = false,
+          s = d.getElementsByTagName("script")[0],
+          a;
+        h.className += " wf-loading";
+        tk.src = "https://use.typekit.net/" + config.kitId + ".js";
+        tk.async = true;
+        tk.onload = tk.onreadystatechange = function () {
+          a = this.readyState;
+          if (f || (a && a != "complete" && a != "loaded")) return;
+          f = true;
+          clearTimeout(t);
+          try {
+            Typekit.load(config);
+          } catch (e) {}
+        };
+        s.parentNode.insertBefore(tk, s);
+      })(document);
+    </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Akaya+Kanadaka&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body class="body_reservation">
+    <section class="reservation_page">
+      <div class="section_title_wrap only_reservation">
+        <img src="../images/title_icon.png" class="title_icon" />
+        <h2 class="section-title">RESERVATION</h2>
+      </div>
+
+      <p class="explanation">
+        全ての項目にご入力をお願いいたします。<br />
+        <span>
+          店舗からの予約確認の連絡をもって<br />
+          ご予約完了となります。</span>
+      </p>
+
+      <form action="#" method="post">
+        <div class="input_area">
+          <p class="input_title">お名前</p>
+          <input type="text" name="name" placeholder="居酒屋 太郎" />
+        </div>
+        <div class="input_area">
+          <p class="input_title">お名前ふりがな</p>
+          <input type="text" name="name_sub" placeholder="いざかや　たろう" />
+        </div>
+        <div class="input_area">
+          <p class="input_title">メールアドレス</p>
+          <input type="email" name="name_sub" placeholder="xxx@example.com" />
+        </div>
+        <div class="input_area">
+          <p class="input_title">メールアドレス（確認用）</p>
+          <input type="email" name="name_sub" placeholder="xxx@example.com" />
+        </div>
+        <div class="input_area">
+          <p class="input_title">電話番号</p>
+          <input type="text" name="name_sub" placeholder="00 00 00 00" />
+        </div>
+        <div class="input_area">
+          <p class="input_title">ご希望日</p>
+          <input type="date" name="name_sub" />
+        </div>
+        <div class="input_area">
+          <p class="input_title">ご来店時間</p>
+          <select name="name_sub">
+            <option value="default">--:--</option>
+            <option value="18:00">18:00</option>
+            <option value="18:30">18:30</option>
+            <option value="19:00">19:00</option>
+            <option value="19:30">19:30</option>
+            <option value="20:00">20:00</option>
+            <option value="20:30">20:30</option>
+            <option value="21:00">21:00</option>
+          </select>
+        </div>
+        <div class="input_area">
+          <p class="input_title">ご予約人数</p>
+          <select name="name_sub">
+            <option value="default">-</option>
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+            <option value="6">6</option>
+          </select>
+        </div>
+        <div class="submit_area">
+          <a href="#" class="submit_button">送信</a>
+        </div>
+      </form>
+    </section>
+
+    <!-- jQueryの読み込み -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <!-- slickの読み込み -->
+    <script type="text/javascript" src="slick/slick.min.js"></script>
+
+    <script type="text/javascript"></script>
+  </body>
+</html>

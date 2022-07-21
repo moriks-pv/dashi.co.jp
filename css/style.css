@@ -1,0 +1,1026 @@
+@charset "UTF-8";
+/*===============================================
+PC：全体共通
+=================================================*/
+body {
+  font-family: fot-tsukubrdgothic-std, sans-serif;
+  font-size: 1.1em;
+  font-style: normal;
+  font-weight: 400;
+  letter-spacing: 0.1em;
+  color: #333333;
+  background-color: #f2cdae;
+  background-image: 
+  url(../images/texture.png),
+  url(../images/flower.png),
+  url(../images/yabane.png),
+  url(../images/wave.png),
+  url(../images/double_circle.png),
+  url(../images/double_circle.png),
+  url(../images/double_circle.png);
+  background-repeat: 
+  repeat,
+  no-repeat,
+  no-repeat,
+  no-repeat,
+  no-repeat,
+  no-repeat,
+  no-repeat;
+  background-position: 
+  top,
+  top 1100px right -200px,
+  top 2800px left -200px,
+  top 3400px right -200px,
+  top 1300px left -400px,
+  top 2400px right -400px,
+  top 3600px left -400px;
+}
+
+
+.section_title_wrap{
+  text-align: center;
+  margin-top: 240px;
+}
+
+.title_icon{
+  width:200px;
+}
+
+.section_content{
+  width: 70%;
+  margin: 0px auto;
+}
+
+h2  {
+  font-family: "Akaya Kanadaka", cursive;
+}
+
+h2.section-title {
+  text-align: center;
+  padding-bottom: 50px;
+  color: #700000;
+  font-size: 2em;
+}
+
+h3  {
+  font-family: "Akaya Kanadaka", cursive;
+}
+
+h3.section-title {
+  text-align: center;
+  padding-bottom: 50px;
+  color: #fff;
+  font-size: 2em;
+}
+
+.col_2{
+  display: flex;
+  justify-content: space-between;
+  column-gap: 80px;
+}
+
+.col_2item{
+  width: calc((100%-30px)/2);
+}
+
+
+.concept_img{
+  width: 100%;
+  height: auto;
+}
+
+
+/*===============================================
+PC : ヘッダとGnav
+=================================================*/
+.header {
+  background-color: #700000;
+  height: 60px;
+  line-height: 60px;
+  position: fixed;
+  top: 0;
+  z-index: 2;
+  width: 100%;
+  box-shadow: 2px 6px 13px rgba(144,72,35,0.3)
+}
+
+.gnav-pc {
+  font-family: "Akaya Kanadaka", cursive;
+  text-align: center;
+}
+
+.gnav-content {
+  text-decoration: none;
+  color: #fff;
+  font-size: 1.25rem;
+  transition-duration: .3s;
+}
+
+.gnav-content:hover{
+  transform: translateY(-3px);
+}
+
+ul.gnav-pc li {
+  display: inline-block;
+  margin: 0 5%;
+}
+
+ul.gnav-pc li a {
+  display: block;
+}
+
+.sp_menu_list{
+  display: none;
+}
+
+.hamburgur_menu{
+ display: none;
+}
+
+/*===============================================
+PC : 予約ボタン（固定配置、途中で消えるようにしたい）
+=================================================*/
+#reservation-button {
+  position: fixed;
+  top: 30px;
+  right: 80px;
+  z-index: 3;
+  transition-duration: .3s;
+}
+
+#reservation-button:hover {
+  transform: scale(1.1);
+}
+
+.reservation_button_img{
+  border-radius: 50%;
+  box-shadow: 2px 6px 13px rgba(144,72,35,0.3);
+  width: 80%;
+  height: auto;
+}
+
+/*===============================================
+PC : メインビジュアル（カルーセルにしたい）
+=================================================*/
+
+#mainvisual{
+  position: relative;
+}
+
+
+.slider img{
+  width: 100%;
+  height: auto;
+}
+
+.scrolldown{
+  display: none;
+}
+
+.logo_area img{
+  width: 20%;
+  background-color: rgb(255,255,255,0.6);
+  padding: 60px;
+}
+
+.logo_area{
+  width: 100%;
+  position: absolute;
+  text-align: center;
+  bottom: 50%;
+  top: 30%;
+  
+}
+
+/*===============================================
+PC : Concept
+=================================================*/
+.concept-title{
+  font-weight: bold;
+  font-size: 1.5em;
+  margin-bottom: 1.5em;
+}
+
+.concept_img{
+  box-shadow: 2px 6px 13px rgba(144,72,35,0.3)
+}
+
+.col_2item .section-discription span
+{
+  display: block;
+}
+/*===============================================
+PC : Menu
+=================================================*/
+.col_3{
+  display: flex;
+  column-gap: 30px;
+}
+
+.col_3item{
+  text-align: center;
+  justify-content:space-between;
+  line-height: 0;
+  text-decoration: none;
+  transition-duration: 500ms;
+  
+
+}
+
+.col_3item:hover{
+  transform: translate(10px,10px) !important;
+  box-shadow: none;
+}
+
+
+.food_title1{
+  font-size: 1.5em;
+  font-weight: 600;
+  color: #efd5bf;
+  padding:1.2em 0 1em 0;
+
+}
+
+.food_title2{
+  font-size: 1.5em;
+  font-weight: 600;
+  color: #efd5bf;
+  padding:1.7em 0 1em 0;
+}
+
+.food_content{
+  color: #efd5bf;
+  line-height: 30px;
+}
+
+.menu_photo{
+  width: 100%;
+  height: auto;
+  line-height: 0;
+  box-shadow: 2px 6px 13px rgba(144,72,35,0.3);
+}
+
+
+.halfcircle_1{
+  width:100%;
+  height:200px;
+  border-radius:0 0 200px 200px;
+  background:#700000;
+  box-shadow: 2px 6px 13px rgba(144,72,35,0.3);
+
+}
+
+.halfcircle_2{
+  width:100%;
+  height:200px;
+  border-radius:200px 200px 0 0;
+  background:#700000;
+  box-shadow: 2px 6px 13px rgba(144,72,35,0.3);
+}
+
+.menu_sponly{
+  display: none;
+}
+
+/*===============================================
+PC : Location
+=================================================*/
+.gmap iframe{
+  width: 100%;
+  height: 400px;
+  box-shadow: 2px 6px 13px rgba(144,72,35,0.3)
+}
+
+.location_table{
+  width: 100%;
+}
+
+.location_table tr{
+  height: 3.5em;
+}
+
+.restaurant_name{
+  font-weight: bold;
+}
+
+/*===============================================
+PC : News
+=================================================*/
+
+.news_table{
+  width: 500px;
+  border-collapse: collapse;
+  vertical-align: middle;
+}
+
+.news_table tr{
+  height: 3.5em;
+  border-top: 1px dotted #333333;
+  border-bottom: 1px dotted #333333;
+}
+
+td .news_tag{
+  width: 80%;
+  vertical-align: middle;
+  padding-left: 0.5em;
+}
+
+.tr:hover{
+  text-decoration: underline;
+}
+
+.col_2item_sns{
+  width: calc((100%-30px)/2);
+  background-image: url(../images/news_photo.png);
+  background-size: cover;
+  height: 400px;
+  background-color: rgba(52, 65, 78, 0.7);
+  background-blend-mode: darken;
+  padding: 30px;
+  margin-bottom: 100px;
+  color: #fff;
+  text-align: center;
+  box-shadow: 2px 6px 13px rgba(144,72,35,0.3)
+}
+
+
+.sns_title{
+  font-family: "Akaya Kanadaka", cursive;
+  font-size: 2em;
+  font-style: italic;
+  margin-bottom: 0.5em;
+}
+
+.sns_list{
+  display: flex;
+  flex-flow: column;
+  justify-content: space-between;
+  margin-top: 0.5em;
+  align-items: center;
+}
+
+.sns_button1{
+    text-decoration: none;
+    color: #fff;
+    display: block;
+    width: 300px;
+    border: solid #fff;
+    background: url(../images/facebook_icon.png) no-repeat 50px center / 30px auto;
+    padding: 12px 12px 12px 30px;
+    text-align: center;
+    margin: 0.5em;
+    overflow: hidden;
+    position: relative;
+    z-index: 1;
+}
+
+ 
+.sns_button2{
+  text-decoration: none;
+  color: #fff;
+  display: block;
+  width: 300px;
+  border: solid #fff;
+  background: url(../images/instagram_icon.png) no-repeat 50px center / 30px auto;
+  padding: 12px 12px 12px 30px;
+  text-align: center;
+  margin: 0.5em;
+  overflow: hidden;
+  position: relative;
+  z-index: 1;
+}
+
+.sns_button3{
+  text-decoration: none;
+  color: #fff;
+  display: block;
+  width: 300px;
+  border: solid #fff;
+  background: url(../images/twitter_icon.png) no-repeat 50px center / 30px auto;
+  padding: 12px 12px 12px 30px;
+  text-align: center;
+  margin: 0.5em;
+  overflow: hidden;
+  position: relative;
+  z-index: 1;
+}
+
+.sns_hover::after {
+  background: #fff;
+  position: absolute;
+  top: 0;
+  left: 0;
+  content: '';
+  width: 100%;
+  height: 100%;
+  transform: scale(0, 1);
+  transform-origin: left top;
+  transition: .2s cubic-bezier(0.45, 0, 0.55, 1);
+  z-index: -1;
+}
+
+.sns_hover:hover {
+  color: #34414e;
+  font-weight: bold;
+}
+
+.sns_hover:hover::after {
+  transform: scale(1, 1);
+}
+ 
+.modal{
+  display: none;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+.modal__bg{
+  background: rgba(51,51,51,0.7);
+  height: 100vh;
+  position: absolute;
+  width: 100%;
+}
+.modal__content{
+  background: #fff;
+  background-image: url(../images/texture.png);
+  left: 50%;
+  padding: 40px;
+  position: absolute;
+  top: 50%;
+  transform: translate(-50%,-50%);
+  width: 50%;
+  height: 450px;
+  text-align: center;
+}
+
+.details_title{
+  font-size: 1.2em;
+  font-weight: bold;
+}
+
+.news_details{
+  margin:35px;
+}
+
+.news_details span{
+  display: block;
+}
+
+.js-modal-close{
+  font-family: "Akaya Kanadaka", cursive;
+  text-decoration: none;
+  color: #34414e;
+  border: solid #34414e;
+  padding: 5px 30px; /* 上下の余白、左右の余白 */
+  border-radius: 30px; /* 角を丸くする */
+
+}
+
+
+.togo_link{
+  text-decoration: none;
+  background-color: #34414e;
+  color: #fff;
+  padding: 8px 30px; /* 上下の余白、左右の余白 */
+  border-radius: 30px; /* 角を丸くする */
+}
+
+.togo_button{
+  margin-bottom: 20px;
+}
+
+/*===============================================
+PC : 予約セクション
+=================================================*/
+#reservation {
+  background-image: url(../images/reservation_photo.png);
+  background-size: cover;
+  height: 550px;
+  background-color: rgba(51, 51, 51, 0.7);
+  background-blend-mode: darken;
+  background-position: center top;
+  background-attachment: fixed;
+}
+
+.reservation_section_wrap{
+ padding: 70px 0;
+}
+
+.reservation_info_wrap{
+  color: #fff;
+  text-align: center;
+}
+
+.reservation-info{
+  font-size: 1.2em;
+}
+.reservation-tel{
+  padding-top: 30px;
+  font-size: 1.5em;
+}
+
+.reservation-tel::before{
+  content: url(../images/tel_icon.png);
+  padding-right: 10px;
+}
+
+#reservation_button_2{
+  display:block;
+  margin: 0 auto;
+  margin-top: 1em;
+  transition-duration: .4s;
+}
+
+
+#reservation_button_2:hover {
+  transform: scale(1.05);
+}
+
+.reservation-button-text2{
+  color: #700000;
+  text-decoration: none;
+  background-color: #fff;
+  font-size: 1.5em;
+  font-weight: bold;
+  padding: 15px 30px;
+  line-height: 120px;
+  border-radius: 60px;
+}
+
+.reservation-button-text2::before{
+  content: url(../images/internet_icon.png);
+  position: relative;
+  top: 5px;
+  padding-right: 10px;
+}
+
+/*===============================================
+PC :　フッタ
+=================================================*/
+.footer {
+  background-color: #700000;
+  height: 70px;
+  font-family: "Akaya Kanadaka", cursive;
+}
+
+.footer p {
+  color: #fff;
+  text-align: center;
+  line-height: 70px;
+  align-items: center;
+  font-size: 0.7em;
+}
+
+/*===============================================
+PC :　フッタ
+=================================================*/
+.footer {
+  background-color: #700000;
+  height: 70px;
+  font-family: "Akaya Kanadaka", cursive;
+}
+
+.footer p {
+  color: #fff;
+  text-align: center;
+  line-height: 70px;
+  align-items: center;
+  font-size: 0.7em;
+}
+
+/*===============================================
+PC :　予約フォーム
+=================================================*/
+.body_reservation {
+  font-family: fot-tsukubrdgothic-std, sans-serif;
+  font-size: 1.1em;
+  font-style: normal;
+  font-weight: 400;
+  letter-spacing: 0.1em;
+  color: #333333;
+  background-color: #f2cdae;
+  background-image: 
+  url(../images/texture.png),
+  url(../images/double_circle.png);
+  background-repeat:
+  repeat,
+  no-repeat;
+  background-position: 
+  top,
+  top 800px left -400px;
+}
+
+.explanation{
+  margin-bottom: 80px;
+  text-align: center;
+}
+.explanation span{
+  font-weight: bold;
+}
+
+
+
+input, select{
+  background-color: #fff;
+  border-radius: 9px;
+  box-shadow: 2px 2px 13px rgba(51,51,51,0.2) inset;
+  width: 20%;
+  height: 37px;
+  padding-left: 20px;
+}
+
+
+.input_area{
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+.input_title{
+  font-weight: bold;
+  width:20%;
+  margin: 0 auto;
+  text-align: left;
+  padding-left: 20px;
+}
+
+.submit_button{
+  background-color: #700000;
+  color: #fff;
+  font-weight: bold;
+  text-decoration: none;
+  padding: 10px 60px; /* 上下の余白、左右の余白 */
+  border-radius: 30px; /* 角を丸くする */
+  border: solid #700000 3px;
+}
+
+.submit_button:hover{
+  background-color: #fff;
+  color:#700000;
+}
+.submit_area{
+  text-align: center;
+  margin: 60px 0 240px;
+}
+
+::placeholder {
+  color: #dbdbdb;
+}
+
+input[type=date]::-webkit-calendar-picker-indicator {
+  color: rgba(0, 0, 0, 0);
+  opacity: 1;
+  display: block;
+  background: url(../images/select_arrow.png) no-repeat;
+  background-position: right 8px center;
+  background-size: 13px 13px;
+}
+
+select{
+  background-image: url(../images/select_arrow.png);
+  background-position: right 8px center;
+  background-repeat: no-repeat;
+  background-size: 13px 13px;
+}
+
+
+
+
+/*================================================
+Smartphone 
+=================================================*/
+@media screen and (max-width: 768px) {
+  body {
+    font-family: fot-tsukubrdgothic-std, sans-serif;
+    font-size: 0.8em;
+    font-style: normal;
+    font-weight: 400;
+    letter-spacing: 0.1em;
+    color: #333333;
+    background-color: #f2cdae;
+    background-image: 
+    url(../images/texture.png),
+    url(../images/double_circle.png),
+    url(../images/double_circle.png),
+    url(../images/double_circle.png);
+    background-repeat: 
+    repeat,
+    no-repeat,
+    no-repeat,
+    no-repeat;
+    background-position: 
+    top,
+    top 1300px left -400px,
+    top 2400px right -400px,
+    top 3600px left -400px;
+    overflow: hidden;
+  }
+
+  /*メインビジュアル*/
+
+  .slider img{
+   height: 100vh;
+   width: auto;
+}
+
+.scrolldown{
+  display: block;
+  color: #fff;
+  position:absolute;
+	bottom:30%;
+	right:50%;
+    /*矢印の動き1秒かけて永遠にループ*/
+	animation: arrowmove 2s ease-in-out infinite;
+}
+
+@keyframes arrowmove{
+  0%{bottom:1%;}
+  50%{bottom:3%;}
+ 100%{bottom:1%;}
+}
+
+/*Scrollテキストの描写*/
+.scrolldown span{
+/*描画位置*/
+position: absolute;
+left:-20px;
+bottom:58px;
+/*テキストの形状*/
+color: #eee;
+font-size: 0.7rem;
+letter-spacing: 0.05em;
+/*縦書き設定*/
+-ms-writing-mode: tb-rl;
+-webkit-writing-mode: vertical-rl;
+writing-mode: vertical-rl;
+}
+
+/* 矢印の描写 */
+.scrolldown:before {
+content: "";
+/*描画位置*/
+position: absolute;
+bottom: 30px;
+right: -6px;
+/*矢印の形状*/
+width: 1px;
+height: 20px;
+background: #eee;
+transform: skewX(-31deg);
+}
+
+.scrolldown:after{
+content:"";
+/*描画位置*/
+position: absolute;
+bottom:30px;
+right:0;
+/*矢印の形状*/
+width:1px;
+height: 60px;
+background:#eee;
+}
+
+.logo_area img{
+  width: 60%;
+}
+
+.logo_area{
+  bottom:240px;
+}
+  /*メニュー*/
+  .gnav-pc {
+    display: none;
+  }
+
+  .header{
+    display: none;
+  }
+
+  .sp_menu_list{
+    display: block;
+  }
+
+  .menu-btn {
+    position: fixed;
+    top: 10px;
+    left: 10px;
+    display: flex;
+    height: 60px;
+    width: 60px;
+    justify-content: center;
+    align-items: center;
+    z-index: 90;
+    background-color: #700000;
+    border-radius: 50%;
+}
+  .menu-btn span,
+  .menu-btn span:before,
+  .menu-btn span:after {
+    content: '';
+    display: block;
+    height: 3px;
+    width: 25px;
+    border-radius: 3px;
+    background-color: #ffffff;
+    position: absolute;
+    transform: .3s;
+  }
+  .menu-btn span:before {
+    bottom: 8px;
+  }
+  .menu-btn span:after {
+    top: 8px;
+  }
+  #menu-btn-check {
+    display: none;
+  }
+  #menu-btn-check:checked ~ .menu-btn span {
+    background-color: rgba(255, 255, 255, 0);/*メニューオープン時は真ん中の線を透明にする*/
+}
+#menu-btn-check:checked ~ .menu-btn span::before {
+    bottom: 0;
+    transform: rotate(45deg);
+}
+#menu-btn-check:checked ~ .menu-btn span::after {
+    top: 0;
+    transform: rotate(-45deg);
+}
+
+.sp_menu_content {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    right: 100%;
+    z-index: 80;
+    background-color: #700000;
+    transition: all 0.5s;
+}
+.sp_menu_content ul {
+    text-align: center;
+    margin-top: 80px;
+}
+.sp_menu_content ul li {
+    list-style: none;
+}
+.sp_menu_content ul li a {
+    display: block;
+    width: 100%;
+    font-size: 1.2em;
+    box-sizing: border-box;
+    color:#ffffff;
+    text-decoration: none;
+    padding: 30px 15px 10px 0;
+    position: relative;
+    font-family: "Akaya Kanadaka", cursive;
+}
+#menu-btn-check:checked ~ .sp_menu_content {
+  right: 0;/*メニューを画面内へ*/
+}
+
+/*予約ボタン非表示*/
+#reservation-button{
+  display: none !important;
+}
+
+
+/*2カラムレイアウト*/
+.col_2{
+  display: block;
+}
+
+.col_2item{
+  width: auto;
+}
+
+/*3カラムレイアウト*/
+.col_3{
+  display: block;
+}
+
+/*Concept*/
+.col_2item .section-discription span{
+  display: inline;
+}
+
+.col_2item .concept-title span{
+  display: block;
+  text-align: center;
+}
+
+.concept_img{
+  margin-top: 50px;
+}
+
+/*Menu*/
+.menu_pconly{
+  display: none !important;
+}
+
+.menu_sponly{
+  display: inline;
+}
+
+.food_content{
+  line-height: 25px;
+}
+
+
+.halfcircle_1{
+  height: 170px;
+  position: relative;
+  top:-8px;
+  margin-bottom: 30px;
+}
+
+
+
+/*Location*/
+.gmap iframe{
+  width: 100vw;
+  margin-left: calc(-50vw + 50%);
+}
+
+.location_table{
+  margin-top: 50px;
+}
+.location_table td{
+  width: 27px;
+}
+
+/*News*/
+.news_table{
+  width: 100%;
+}
+
+.sns_button1,.sns_button2,.sns_button3{
+  width: 230px;
+  margin: 12px 20px;
+}
+
+.col_2item_sns{
+  margin-top: 50px;
+  width: 100%;
+  height:350px;
+  padding:20px;
+}
+
+.sns_description{
+  font-size: 0.9em;
+}
+
+
+/*Reservation*/
+#reservation{
+  height:500px;
+}
+
+/*モーダル*/
+.modal__content{
+  width: 100vw;
+}
+
+.news_details{
+  margin:35px 0;
+}
+.news_details span{
+  display: inline;
+}
+
+.sp_only{
+  display: block !important;
+}
+
+.modal__content img{
+  width: 80px;
+}
+
+/*予約フォーム*/
+input, select{
+  width: 60%;
+}
+
+.explanation{
+  margin: 30px 20px;
+  font-size: 0.9em;
+}
+
+.input_title{
+  font-size: 0.8em;
+  width: 60%;
+}
+
+::placeholder {
+  font-size: 0.8em;
+}
+
+.only_reservation{
+  margin-top: 100px;
+}
+
+.submit_area {
+  margin: 60px 0 100px;
+}
+}
+
