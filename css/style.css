@@ -961,7 +961,11 @@ background:#eee;
 
 }
 
-
+.tel-number a {
+  color:#fff;
+  text-decoration:none;
+  }
+	
 /*モーダル*/
 .modal__content{
   width: 100vw;
