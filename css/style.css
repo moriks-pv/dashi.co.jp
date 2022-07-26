@@ -619,6 +619,12 @@ input, select{
   text-align: center;
 }
 
+.date_area{
+  width: 32%!important;
+  margin: 0 auto;
+  margin-bottom: 30px;
+}
+
 .input_title{
   font-weight: bold;
   width:20%;
@@ -991,6 +997,13 @@ input, select{
   width: 60%!important;
 }
 
+.date_area{
+  width: 60%!important;
+  gap:10px;
+  display: flex;
+}
+
+
 .explanation{
   margin: 30px 20px;
   font-size: 0.9em;
@@ -1013,5 +1026,14 @@ input, select{
 .submit_area {
   margin: 60px 0 100px;
 }
+
+input[type=date]::-webkit-calendar-picker-indicator {
+  background-size: 10x 10px!important;
+}
+
+select{
+  background-size: 10px 10px;
+}
+
 }
 
